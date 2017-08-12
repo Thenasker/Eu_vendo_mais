@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">EuVendoMais</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Inicio de sesão</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">Email invalido</string>
+    <string name="error_invalid_password">Senha muito curta</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Campo requerido</string>
+    <string name="permission_rationale">"Precisa dos contatos para autocompletar emails."
+    </string>
+
+    <string-array name="notific">
+        <item>1 semana</item>
+        <item>15 dias</item>
+        <item>1 mes</item>
+    </string-array>
+
+    <string-array name="metodo">
+        <item>Dinheiro</item>
+        <item>Boleto</item>
+        <item>Cartão de crédito</item>
+    </string-array>
+</resources>

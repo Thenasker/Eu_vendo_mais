@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thenasker.euvendomais.NovaVenta"
+    android:background="@color/colorSecondaryLight"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgClientaDetalhe"
+        android:src="@drawable/defaultimg"
+        app:civ_border_color="@color/colorSecondaryDark"
+        app:civ_border_width="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgClientaDetalhe"
+        android:layout_marginTop="30dp"
+        android:hint="Nome do cliente"
+        android:textColor="@color/colorSecondaryDark"
+        android:id="@+id/txtNomeDetalhe"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNomeDetalhe"
+        android:layout_marginTop="10dp"
+        android:hint="Valor da compra"
+        android:textColor="@color/colorSecondaryDark"
+        android:id="@+id/txtValorDetalhe"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layNot"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtValorDetalhe">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificar após "
+        android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/notific"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/spnNoti">
+        </Spinner>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_comrpa"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Adicionar compra"
+        android:textStyle="bold"
+        android:layout_below="@id/layNot"/>
+
+
+</RelativeLayout>

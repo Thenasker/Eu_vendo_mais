@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thenasker.euvendomais.NovoPago"
+    android:background="@color/colorSecondaryLight"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgClientaPago"
+        android:src="@drawable/defaultimg"
+        app:civ_border_color="@color/colorSecondaryDark"
+        app:civ_border_width="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgClientaPago"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorSecondaryDark"
+        android:id="@+id/lblNomePago"
+        android:text="Nome do cliente"
+        android:textSize="18dp"/>
+
+
+    <com.thenasker.euvendomais.TextProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:progress="25"
+        android:layout_marginBottom="5dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/custom_progress"
+        android:id="@+id/progPagamentoPago"
+        android:layout_below="@id/lblNomePago"
+        android:layout_marginTop="10dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progPagamentoPago"
+        android:id="@+id/layminmax">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 R$"
+            android:id="@+id/lblzeroPago"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="99"
+            android:id="@+id/lblTotalPago"
+            android:textAlignment="viewEnd"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layminmax"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtQuantidade"
+        android:inputType="numberDecimal"
+        android:hint="Quantidade que vai pagar"
+        android:textColor="@color/colorSecondaryDark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layNot"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtQuantidade">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metodo de pago"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/metodo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/spnMetodo">
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layNot"
+        android:id="@+id/layCard"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCartao1"
+            android:inputType="numberDecimal"
+            android:hint="0000"
+            android:textColor="@color/colorSecondaryDark"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:maxLength="4"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCartao2"
+            android:inputType="numberDecimal"
+            android:hint="0000"
+            android:textColor="@color/colorSecondaryDark"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:maxLength="4"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCartao3"
+            android:inputType="numberDecimal"
+            android:hint="0000"
+            android:textColor="@color/colorSecondaryDark"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:maxLength="4"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCartao4"
+            android:inputType="numberDecimal"
+            android:hint="0000"
+            android:textColor="@color/colorSecondaryDark"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_pago"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Efetuar pago"
+        android:textStyle="bold"
+        android:layout_below="@id/layCard"/>
+
+
+</RelativeLayout>

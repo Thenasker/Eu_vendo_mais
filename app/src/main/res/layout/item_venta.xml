@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:layout_marginBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imgCliente"
+        app:civ_border_color="@color/colorSecondary"
+        app:civ_border_width="2dp"
+        android:layout_margin="12dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="12dp">
+        
+        <com.thenasker.euvendomais.TextProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:progress="25"
+            android:layout_marginBottom="5dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/custom_progress"
+            android:id="@+id/progPagamento"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 R$"
+                android:id="@+id/lblzero"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99"
+                android:id="@+id/lblTotal"
+                android:textAlignment="viewEnd"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome da clienta"
+                android:id="@+id/lblNome"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>
